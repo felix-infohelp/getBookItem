@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import os
 import time
 
-with open('mylist.txt', 'r') as file:
+with open('list.txt', 'r') as file:
     lines = file.readlines()
 
 for line in lines:
