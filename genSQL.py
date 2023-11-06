@@ -1,5 +1,5 @@
-# list.txt 清單中是封面圖檔名，是以 book_id命名
-with open('list.txt', 'r') as file:
+# jpglist.txt 清單中是封面圖檔名，是以 book_id命名
+with open('jpglist.txt', 'r') as file:
     lines = file.readlines()
 
 for i, line in enumerate(lines, 1):
