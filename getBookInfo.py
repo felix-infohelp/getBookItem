@@ -24,7 +24,8 @@ if response.status_code == 200:
     for sproduct in sproducts:
         title = sproduct.find('h3', class_='Title').find('a')
 
-        book_info["Title"] = title.text.strip()
+        title_tmp = title.text.strip()
+        book_info["Title"] = title_tmp[2:]
 
         author_div = sproduct.find('div', class_='Author')
 
