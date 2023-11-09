@@ -40,8 +40,8 @@ if response.status_code == 200:
             book_info["PublishDate"] = author_parts[2].strip()
 
         description_div = sproduct.find('div', class_='Description')
-
-        book_info["Description"] = description_div.text.strip()
+        if description_div is not None:
+            book_info["Description"] = description_div.text.strip()
 
     book_json = json.dumps(book_info, ensure_ascii=False, indent=4)
 
